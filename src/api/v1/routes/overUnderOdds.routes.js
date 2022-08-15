@@ -1,13 +1,13 @@
 const express = require("express");
 const router = express.Router();
-const { MoneylineOddsController } = require("../controller/index");
+const { OverUnderOddsController } = require("../controller/index");
 
-/***************************************************** Money Line Odd API   *******************************************************************/
+/******************************************************* Over/Under Odd API   *******************************************************************/
 /**
  * @swagger
- * /api/live/odds/money-line:
+ * /api/live/odds/over-under:
  *   get:
- *     summary: Money Line  Odds With GameID And BookmakerId
+ *     summary: Over/Under Odds With GameID And BookmakerId
  *     tags: [Popular Odds]
  *     parameters:
  *       - in: query
@@ -23,7 +23,7 @@ const { MoneylineOddsController } = require("../controller/index");
  *         description: The bookmark Id
  *     responses:
  *       200:
- *         description: The Money Line  Odds Data With GameID And BookmakerId
+ *         description: The Over/Under Odds Data  With GameID And BookmakerId
  *       404:
  *         description: No Data Found
  *       429:
@@ -31,14 +31,14 @@ const { MoneylineOddsController } = require("../controller/index");
  *       500:
  *         description: Server Error
  */
-router.get('/odds/money-line', MoneylineOddsController.money_Line_Odds_Data_Of_Single_Game);
+router.get('/odds/over-under', OverUnderOddsController.over_Under_Odds_Data_Of_Single_Game);
 
-/*****************************************************  Money Line Qtr1  Odd API   ****************************************************************************/
+/***************************************************** Over/Under Qtr1 Odd API   *******************************************************************/
 /**
  * @swagger
- * /api/live/odds/money-line/1-quarter:
+ * /api/live/odds/over-under/1-quarter:
  *   get:
- *     summary: Money Line Qtr1  Odds With GameID And BookmakerId
+ *     summary: Over/Under Qtr1 Odds With GameID And BookmakerId
  *     tags: [Periodic Odds]
  *     parameters:
  *       - in: query
@@ -54,7 +54,7 @@ router.get('/odds/money-line', MoneylineOddsController.money_Line_Odds_Data_Of_S
  *         description: The bookmark Id
  *     responses:
  *       200:
- *         description: The Money Line Qtr1 Odds Data With GameID And BookmakerId
+ *         description: The Over/Under Qtr1 Odds Data  With GameID And BookmakerId
  *       404:
  *         description: No Data Found
  *       429:
@@ -62,14 +62,14 @@ router.get('/odds/money-line', MoneylineOddsController.money_Line_Odds_Data_Of_S
  *       500:
  *         description: Server Error
  */
-router.get('/odds/money-line/1-quarter', MoneylineOddsController.money_Line_Qtr1_Odds_Data_Of_Single_Game);
+router.get('/odds/over-under/1-quarter', OverUnderOddsController.over_Under_Qtr1_Odds_Data_Of_Single_Game);
 
-/*****************************************************  Money Line Qtr2  Odd API   ****************************************************************************/
+/**************************************************** Over/Under Qtr2 Odd API   *******************************************************************/
 /**
  * @swagger
- * /api/live/odds/money-line/2-quarter:
+ * /api/live/odds/over-under/2-quarter:
  *   get:
- *     summary: Money Line Qtr2  Odds With GameID And BookmakerId
+ *     summary: Over/Under Qtr2 Odds With GameID And BookmakerId
  *     tags: [Periodic Odds]
  *     parameters:
  *       - in: query
@@ -85,7 +85,7 @@ router.get('/odds/money-line/1-quarter', MoneylineOddsController.money_Line_Qtr1
  *         description: The bookmark Id
  *     responses:
  *       200:
- *         description: The Money Line Qtr2 Odds Data With GameID And BookmakerId
+ *         description: The Over/Under Qtr2 Odds Data  With GameID And BookmakerId
  *       404:
  *         description: No Data Found
  *       429:
@@ -93,14 +93,14 @@ router.get('/odds/money-line/1-quarter', MoneylineOddsController.money_Line_Qtr1
  *       500:
  *         description: Server Error
  */
-router.get('/odds/money-line/2-quarter', MoneylineOddsController.money_Line_Qtr2_Odds_Data_Of_Single_Game);
+router.get('/odds/over-under/2-quarter', OverUnderOddsController.over_Under_Qtr2_Odds_Data_Of_Single_Game);
 
-/*****************************************************  Money Line Qtr3  Odd API   ****************************************************************************/
+/***************************************************** Over/Under Qtr3 Odd API   *******************************************************************/
 /**
  * @swagger
- * /api/live/odds/money-line/3-quarter:
+ * /api/live/odds/over-under/3-quarter:
  *   get:
- *     summary: Money Line Qtr3  Odds With GameID And BookmakerId
+ *     summary: Over/Under Qtr3 Odds With GameID And BookmakerId
  *     tags: [Periodic Odds]
  *     parameters:
  *       - in: query
@@ -116,7 +116,7 @@ router.get('/odds/money-line/2-quarter', MoneylineOddsController.money_Line_Qtr2
  *         description: The bookmark Id
  *     responses:
  *       200:
- *         description: The Money Line Qtr3 Odds Data With GameID And BookmakerId
+ *         description: The Over/Under Qtr3 Odds Data  With GameID And BookmakerId
  *       404:
  *         description: No Data Found
  *       429:
@@ -124,14 +124,14 @@ router.get('/odds/money-line/2-quarter', MoneylineOddsController.money_Line_Qtr2
  *       500:
  *         description: Server Error
  */
-router.get('/odds/money-line/3-quarter', MoneylineOddsController.money_Line_Qtr3_Odds_Data_Of_Single_Game);
+router.get('/odds/over-under/3-quarter', OverUnderOddsController.over_Under_Qtr3_Odds_Data_Of_Single_Game);
 
-/*****************************************************  Money Line Qtr4  Odd API   ****************************************************************************/
+/**************************************************** Over/Under Qtr4 Odd API   *******************************************************************/
 /**
  * @swagger
- * /api/live/odds/money-line/4-quarter:
+ * /api/live/odds/over-under/4-quarter:
  *   get:
- *     summary: Money Line Qtr4  Odds With GameID And BookmakerId
+ *     summary: Over/Under Qtr4 Odds With GameID And BookmakerId
  *     tags: [Periodic Odds]
  *     parameters:
  *       - in: query
@@ -147,7 +147,7 @@ router.get('/odds/money-line/3-quarter', MoneylineOddsController.money_Line_Qtr3
  *         description: The bookmark Id
  *     responses:
  *       200:
- *         description: The Money Line Qtr4 Odds Data With GameID And BookmakerId
+ *         description: The Over/Under Qtr4 Odds Data  With GameID And BookmakerId
  *       404:
  *         description: No Data Found
  *       429:
@@ -155,14 +155,14 @@ router.get('/odds/money-line/3-quarter', MoneylineOddsController.money_Line_Qtr3
  *       500:
  *         description: Server Error
  */
-router.get('/odds/money-line/4-quarter', MoneylineOddsController.money_Line_Qtr4_Odds_Data_Of_Single_Game);
+router.get('/odds/over-under/4-quarter', OverUnderOddsController.over_Under_Qtr4_Odds_Data_Of_Single_Game);
 
-/***************************************************** Money Line 1st Half Odd API   ****************************************************************************/
+/**************************************************** Over/Under 1stHalf Odd API   *******************************************************************/
 /**
  * @swagger
- * /api/live/odds/money-line/1st-half:
+ * /api/live/odds/over-under/1st-half:
  *   get:
- *     summary: Money Line 1st Half  Odds With GameID And BookmakerId
+ *     summary: Over/Under 1stHalf Odds With GameID And BookmakerId
  *     tags: [Periodic Odds]
  *     parameters:
  *       - in: query
@@ -178,7 +178,7 @@ router.get('/odds/money-line/4-quarter', MoneylineOddsController.money_Line_Qtr4
  *         description: The bookmark Id
  *     responses:
  *       200:
- *         description: The Money Line 1st Half Odds Data With GameID And BookmakerId
+ *         description: The Over/Under 1stHalf Odds Data  With GameID And BookmakerId
  *       404:
  *         description: No Data Found
  *       429:
@@ -186,14 +186,14 @@ router.get('/odds/money-line/4-quarter', MoneylineOddsController.money_Line_Qtr4
  *       500:
  *         description: Server Error
  */
-router.get('/odds/money-line/1st-half', MoneylineOddsController.money_Line_1stHalf_Odds_Data_Of_Single_Game);
+router.get('/odds/over-under/1st-half', OverUnderOddsController.over_Under_1stHalf_Odds_Data_Of_Single_Game);
 
-/*****************************************************  Money Line 2nd Half Odd API   ****************************************************************************/
+/***************************************************** Over/Under 2ndHalf Odd API   *******************************************************************/
 /**
  * @swagger
- * /api/live/odds/money-line/2nd-half:
+ * /api/live/odds/over-under/2nd-half:
  *   get:
- *     summary: Money Line 2nd Half  Odds With GameID And BookmakerId
+ *     summary: Over/Under 2ndHalf Odds With GameID And BookmakerId
  *     tags: [Periodic Odds]
  *     parameters:
  *       - in: query
@@ -209,7 +209,7 @@ router.get('/odds/money-line/1st-half', MoneylineOddsController.money_Line_1stHa
  *         description: The bookmark Id
  *     responses:
  *       200:
- *         description: The Money Line 2nd Half Odds Data With GameID And BookmakerId
+ *         description: The Over/Under 2ndHalf Odds Data  With GameID And BookmakerId
  *       404:
  *         description: No Data Found
  *       429:
@@ -217,7 +217,6 @@ router.get('/odds/money-line/1st-half', MoneylineOddsController.money_Line_1stHa
  *       500:
  *         description: Server Error
  */
-router.get('/odds/money-line/2nd-half', MoneylineOddsController.money_Line_2ndHalf_Odds_Data_Of_Single_Game);
-
+router.get('/odds/over-under/2nd-half', OverUnderOddsController.over_Under_2ndHalf_Odds_Data_Of_Single_Game);
 
 module.exports = router;
