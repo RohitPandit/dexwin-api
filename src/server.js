@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
@@ -10,6 +11,8 @@ const { specs } = require("./swagger/swagger.doc");
 
 require("./db/moralis.db");
 
+const PORT = process.env.PORT || credentials.PORT;
+
 var corsOptions = {
     Origin: "http://localhost:*"
 };
@@ -18,8 +21,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(specs));
 
-app.listen(credentials.PORT, () => {
-    console.log("Server start : " + credentials.PORT);
+app.listen(PORT, () => {
+    console.log("Server start : " + PORT);
 });
 
 app.set('view engine', 'ejs');
