@@ -8,7 +8,7 @@ const options = {
 		openapi: "3.0.0",
 		info: {
 			title: "DexWin", 
-			description: "Use This URL " + credentials.SWAGGER_URL,
+			description: `Use This URL * ${credentials.SWAGGER_URL} *`,
 			version: "1.0.0",
 		},
 		servers: [
@@ -17,7 +17,7 @@ const options = {
 			},
 		],
 	},
-	apis: ["../api/v1/routes/*.js"],
+	apis: ["./src/api/v1/routes/*.js"],
 }; 
 
 const specs = swaggerJsDoc(options);

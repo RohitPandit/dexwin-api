@@ -1,11 +1,20 @@
 {
     "Customer": {
-        "config":{
-            "PORT" : 8080,
-            "MORALIS_APP_API" : "https://bbibfzonzgpv.usemoralis.com:2053/server",
-            "MORALIS_APP_ID" : "a8LbiCRGd46kUCztoOzFxedIfKuvdiEoFo9cwEwD",
-            "MORALIS_MASTER_KEY" : "zFts5OLxxjh0hI1yM3OBxUcO0L5CUSfIIYJIlthu",
-            "SWAGGER_URL": "http://localhost:3000"
+        "config": {
+            "PORT": 8080,
+            "MORALIS_APP_API": "https://bbibfzonzgpv.usemoralis.com:2053/server",
+            "MORALIS_APP_ID": "a8LbiCRGd46kUCztoOzFxedIfKuvdiEoFo9cwEwD",
+            "MORALIS_MASTER_KEY": "zFts5OLxxjh0hI1yM3OBxUcO0L5CUSfIIYJIlthu",
+            "SWAGGER_URL": "http://localhost:8080"
+        },
+        "rapidapi": {
+            "RAPID_API_BASKETBALL_GAMES": "https://api-basketball.p.rapidapi.com/games",
+            "RAPID_API_BASKETBALL_ODDS": "https://api-basketball.p.rapidapi.com/odds",
+            "RAPID_API_NBA_TEAMS_STATISTICS": "https://api-nba-v1.p.rapidapi.com/teams/statistics",
+            "RAPID_API_NBA_PLAYERS_STATISTICS": "https://api-nba-v1.p.rapidapi.com/players/statistics",
+            "X_RapidAPI_Key": "05e1cd5888msh3db240aee27bf8bp17a6edjsnf2648d7c1642",
+            "API_BASKETBALL_HOST": "api-basketball.p.rapidapi.com",
+            "API_NBA_HOST": "api-nba-v1.p.rapidapi.com"
         }
     }
 }
