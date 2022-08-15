@@ -6,6 +6,8 @@ const SpreadOddsController = require("./spreadOdds.controller");
 const ThreeWayMoneyLineOddsController = require("./threeWayMoneyLineOdds.controller");
 const OverUnderOddsController = require("./overUnderOdds.controllers");
 const LiveGamesController = require("./liveGames.controllers");
+const Moneyline3WayBetsController = require("./moneyline3WayBets.controller");
+const MoneylineBetsController = require("./moneylineBets.controller");
 
 module.exports = {
     OddEvenOddController,
@@ -15,5 +17,7 @@ module.exports = {
     SpreadOddsController,
     ThreeWayMoneyLineOddsController,
     OverUnderOddsController,
-    LiveGamesController
+    LiveGamesController,
+    Moneyline3WayBetsController,
+    MoneylineBetsController
 }

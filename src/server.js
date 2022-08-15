@@ -34,6 +34,7 @@ app.use("/api/live/", require("./api/v1/routes/moneyLineOdds.routes"));
 app.use("/api/live/", require("./api/v1/routes/spreadOdds.routes"));
 app.use("/api/live/", require("./api/v1/routes/overUnderOdds.routes"));
 app.use("/api/live/", require("./api/v1/routes/liveGames.routes"));
+app.use("/api/", require("./api/v1/routes/bets.routes"));
 
 app.get('/', (req, res) => {
     res.render("index");    
