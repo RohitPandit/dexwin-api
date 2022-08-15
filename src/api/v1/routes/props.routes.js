@@ -2,9 +2,6 @@ const express = require('express');
 const router = express.Router();
 const { PropsController } = require("../controller/index");
 
-
-
-
 // Get Props odds With GameID And BookmakerID
 /**
  * @swagger
@@ -35,8 +32,7 @@ const { PropsController } = require("../controller/index");
  *       500:
  *         description: Server Error
  */
- router.get('/odds/props/team', PropsController.getTeamProps);
-
+router.get('/odds/props/team', PropsController.getTeamProps);
 
 /**
  * @swagger

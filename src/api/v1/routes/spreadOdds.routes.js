@@ -1,14 +1,14 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const { RacePointsOddController } = require("../controller/index");
+const { SpreadOddsController } = require("../controller/index");
 
-// Get Race to 12 points odds With GameID And BookmakerID
+// Get Spread odds With GameID And BookmakerID
 /**
  * @swagger
- * /api/live/odds/race/12-points:
+ * /api/live/odds/spread:
  *   get:
- *     summary: Get Race to 12 points odds With GameID And BookmakerID
- *     tags: [Exotic Odds]
+ *     summary: Get Spread odds With GameID And BookmakerID
+ *     tags: [Popular Odds]
  *     parameters:
  *       - in: query
  *         name: gameid
@@ -23,7 +23,7 @@ const { RacePointsOddController } = require("../controller/index");
  *         description: The bookmaker Id
  *     responses:
  *       200:
- *         description: Get Race to 12 points Odds Successfully.
+ *         description: Get Spread Odds Successfully.
  *       404:
  *         description: No Data Found
  *       429:
@@ -31,15 +31,15 @@ const { RacePointsOddController } = require("../controller/index");
  *       500:
  *         description: Server Error
  */
-router.get('/odds/race/12-points', RacePointsOddController.getRaceTo12PointOdd);
+router.get('/odds/spread', SpreadOddsController.getSpreadOdds);
 
-// Get Race to 25 points odds With GameID And BookmakerID
+// Get Spread (1-Half) odds With GameID And BookmakerID
 /**
  * @swagger
- * /api/live/odds/race/25-points:
+ * /api/live/odds/spread/1st-half:
  *   get:
- *     summary: Get Race to 25 points odds With GameID And BookmakerID
- *     tags: [Exotic Odds]
+ *     summary: Get Spread (1-Half) odds With GameID And BookmakerID
+ *     tags: [Periodic Odds]
  *     parameters:
  *       - in: query
  *         name: gameid
@@ -54,7 +54,7 @@ router.get('/odds/race/12-points', RacePointsOddController.getRaceTo12PointOdd);
  *         description: The bookmaker Id
  *     responses:
  *       200:
- *         description: Get Race to 25 points Odds Successfully.
+ *         description: Get Spread 1st-half Odds Successfully.
  *       404:
  *         description: No Data Found
  *       429:
@@ -62,15 +62,15 @@ router.get('/odds/race/12-points', RacePointsOddController.getRaceTo12PointOdd);
  *       500:
  *         description: Server Error
  */
-router.get('/odds/race/25-points', RacePointsOddController.getRaceTo25PointOdd);
+router.get('/odds/spread/1st-half', SpreadOddsController.getSpreadResultFirstHalf);
 
-// Get Race to 45 points odds With GameID And BookmakerID
+// Get Spread (2-Half) odds With GameID And BookmakerID
 /**
  * @swagger
- * /api/live/odds/race/45-points:
+ * /api/live/odds/spread/2nd-half:
  *   get:
- *     summary: Get Race to 45 points odds With GameID And BookmakerID
- *     tags: [Exotic Odds]
+ *     summary: Get Spread (2-Half) odds With GameID And BookmakerID
+ *     tags: [Periodic Odds]
  *     parameters:
  *       - in: query
  *         name: gameid
@@ -85,7 +85,7 @@ router.get('/odds/race/25-points', RacePointsOddController.getRaceTo25PointOdd);
  *         description: The bookmaker Id
  *     responses:
  *       200:
- *         description: Get Race to 45 points Odds Successfully.
+ *         description: Get Spread 2nd-Half Odds Successfully.
  *       404:
  *         description: No Data Found
  *       429:
@@ -93,15 +93,15 @@ router.get('/odds/race/25-points', RacePointsOddController.getRaceTo25PointOdd);
  *       500:
  *         description: Server Error
  */
-router.get('/odds/race/45-points', RacePointsOddController.getRaceTo45PointOdd);
+router.get('/odds/spread/2nd-half', SpreadOddsController.getSpreadResultSecondHalf);
 
-// Get Race to 20 points odds With GameID And BookmakerID
+// Get Spread (1-Quarter) odds With GameID And BookmakerID
 /**
  * @swagger
- * /api/live/odds/race/20-points:
+ * /api/live/odds/spread/1-quarter:
  *   get:
- *     summary: Get Race to 20 points odds With GameID And BookmakerID
- *     tags: [Exotic Odds]
+ *     summary: Get Spread (1-Quarter) odds With GameID And BookmakerID
+ *     tags: [Periodic Odds]
  *     parameters:
  *       - in: query
  *         name: gameid
@@ -116,7 +116,7 @@ router.get('/odds/race/45-points', RacePointsOddController.getRaceTo45PointOdd);
  *         description: The bookmaker Id
  *     responses:
  *       200:
- *         description: Get Race to 20 points Odds Successfully.
+ *         description: Get Spread 1st-Qtr Odds Successfully.
  *       404:
  *         description: No Data Found
  *       429:
@@ -124,15 +124,15 @@ router.get('/odds/race/45-points', RacePointsOddController.getRaceTo45PointOdd);
  *       500:
  *         description: Server Error
  */
-router.get('/odds/race/20-points', RacePointsOddController.getRaceTo20PointOdd);
+router.get('/odds/spread/1-quarter', SpreadOddsController.getSpreadResultFirstQuarter);
 
-// Get Race to 10 points odds With GameID And BookmakerID
+// Get Spread (2-Quarter) odds With GameID And BookmakerID
 /**
  * @swagger
- * /api/live/odds/race/10-points:
+ * /api/live/odds/spread/2-quarter:
  *   get:
- *     summary: Get Race to 10 points odds With GameID And BookmakerID
- *     tags: [Exotic Odds]
+ *     summary: Get Spread (2-Quarter) odds With GameID And BookmakerID
+ *     tags: [Periodic Odds]
  *     parameters:
  *       - in: query
  *         name: gameid
@@ -147,7 +147,7 @@ router.get('/odds/race/20-points', RacePointsOddController.getRaceTo20PointOdd);
  *         description: The bookmaker Id
  *     responses:
  *       200:
- *         description: Get Race to 10 points Odds Successfully.
+ *         description: Get Spread 2nd-Qtr Odds Successfully.
  *       404:
  *         description: No Data Found
  *       429:
@@ -155,15 +155,15 @@ router.get('/odds/race/20-points', RacePointsOddController.getRaceTo20PointOdd);
  *       500:
  *         description: Server Error
  */
-router.get('/odds/race/10-points', RacePointsOddController.getRaceTo10PointOdd);
+router.get('/odds/spread/2-quarter', SpreadOddsController.getSpreadResultSecondQuarter);
 
-// Get Race to 50 points odds With GameID And BookmakerID
+// Get Spread (3-Quarter) odds With GameID And BookmakerID
 /**
  * @swagger
- * /api/live/odds/race/50-points:
+ * /api/live/odds/spread/3-quarter:
  *   get:
- *     summary: Get Race to 50 points odds With GameID And BookmakerID
- *     tags: [Exotic Odds]
+ *     summary: Get Spread (3-Quarter) odds With GameID And BookmakerID
+ *     tags: [Periodic Odds]
  *     parameters:
  *       - in: query
  *         name: gameid
@@ -178,7 +178,7 @@ router.get('/odds/race/10-points', RacePointsOddController.getRaceTo10PointOdd);
  *         description: The bookmaker Id
  *     responses:
  *       200:
- *         description: Get Race to 50 points Odds Successfully.
+ *         description: Get Spread 3rd-Qtr Odds Successfully.
  *       404:
  *         description: No Data Found
  *       429:
@@ -186,15 +186,15 @@ router.get('/odds/race/10-points', RacePointsOddController.getRaceTo10PointOdd);
  *       500:
  *         description: Server Error
  */
-router.get('/odds/race/50-points', RacePointsOddController.getRaceTo50PointOdd);
+router.get('/odds/spread/3-quarter', SpreadOddsController.getSpreadResultThirdQuarter);
 
-// Get Race to 40 points odds With GameID And BookmakerID
+// Get Spread (4-Quarter) odds With GameID And BookmakerID
 /**
  * @swagger
- * /api/live/odds/race/40-points:
+ * /api/live/odds/spread/4-quarter:
  *   get:
- *     summary: Get Race to 40 points odds With GameID And BookmakerID
- *     tags: [Exotic Odds]
+ *     summary: Get Spread (4-Quarter) odds With GameID And BookmakerID
+ *     tags: [Periodic Odds]
  *     parameters:
  *       - in: query
  *         name: gameid
@@ -209,7 +209,7 @@ router.get('/odds/race/50-points', RacePointsOddController.getRaceTo50PointOdd);
  *         description: The bookmaker Id
  *     responses:
  *       200:
- *         description: Get Race to 40 points Odds Successfully.
+ *         description: Get Spread 4th-Qtr Odds Successfully.
  *       404:
  *         description: No Data Found
  *       429:
@@ -217,37 +217,6 @@ router.get('/odds/race/50-points', RacePointsOddController.getRaceTo50PointOdd);
  *       500:
  *         description: Server Error
  */
-router.get('/odds/race/40-points', RacePointsOddController.getRaceTo40PointOdd);
+router.get('/odds/spread/4-quarter', SpreadOddsController.getSpreadResultFourthQuarter);
 
-// Get Race to 30 points odds With GameID And BookmakerID
-/**
- * @swagger
- * /api/live/odds/race/30-points:
- *   get:
- *     summary: Get Race to 30 points odds With GameID And BookmakerID
- *     tags: [Exotic Odds]
- *     parameters:
- *       - in: query
- *         name: gameid
- *         schema:
- *           type: integer 
- *         required: true
- *         description: The Game OR Match Id
- *       - in: query
- *         name: bookmakerid
- *         schema:
- *           type: integer
- *         description: The bookmaker Id
- *     responses:
- *       200:
- *         description: Get Race to 30 points Odds Successfully.
- *       404:
- *         description: No Data Found
- *       429:
- *         description: You have exceeded the rate limit per minute for your plan, BASIC, by the API provider
- *       500:
- *         description: Server Error
- */
-router.get('/odds/race/30-points', RacePointsOddController.getRaceTo30PointOdd);
-
-module.exports = router; 
+module.exports = router;

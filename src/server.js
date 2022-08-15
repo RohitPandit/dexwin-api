@@ -22,10 +22,14 @@ app.listen(credentials.PORT, () => {
     console.log("Server start : " + credentials.PORT);
 });
 
+app.set('view engine', 'ejs');
 app.use("/api/live/", require("./api/v1/routes/oddEvenOdds.routes"));
 app.use("/api/live/", require("./api/v1/routes/racePoints.routes"));
 app.use("/api/live/", require("./api/v1/routes/props.routes"));
+app.use("/api/live/", require("./api/v1/routes/threewayMoneylineOdds.routes"));
+app.use("/api/live/", require("./api/v1/routes/moneyLineOdds.routes"));
+app.use("/api/live/", require("./api/v1/routes/spreadOdds.routes"));
 
 app.get('/', (req, res) => {
-    res.send("Hello World");
+    res.render("index");
 });

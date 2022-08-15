@@ -2,10 +2,6 @@ const express = require('express');
 const router = express.Router();
 const { OddEvenOddController } = require("../controller/index");
 
-
-
-/*************************************** odd even odds routes ***********************************************/
-
 // Get Odd Even odds With GameID And BookmakerID
 /**
  * @swagger
@@ -191,9 +187,6 @@ router.get('/odds/odd-even/home', OddEvenOddController.getEvenOddHome);
  *         description: Server Error
  */
 router.get('/odds/odd-even/away', OddEvenOddController.getEvenOddAway);
-
-
-
 
 // Get Away Odd Even (1-Half) odds With GameID And BookmakerID
 /**
