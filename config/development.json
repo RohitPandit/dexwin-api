@@ -15,6 +15,12 @@
             "X_RapidAPI_Key": "05e1cd5888msh3db240aee27bf8bp17a6edjsnf2648d7c1642",
             "API_BASKETBALL_HOST": "api-basketball.p.rapidapi.com",
             "API_NBA_HOST": "api-nba-v1.p.rapidapi.com"
+        },
+        "infura":{
+            "TOKEN": "4555c194c9454fc588ad3eaed8377ebe"
+        },
+        "biconomy": {
+            "API_KEY": "vbUHJZsCj.52965308-189f-4208-830b-4c32a828f3db"
         }
     }
 }
